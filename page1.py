@@ -37,8 +37,8 @@ text_placeholder = st.empty()
 
 # Loop yang dikontrol oleh Streamlit (bukan while True yang tidak responsif)
 if run and camera:
-    stop_button = st.button("Stop Camera")
-    while run and not stop_button:
+    # stop_button = st.button("Stop Camera")
+    while run :
         ret, frame = camera.read()
         if not ret:
             st.error("Failed to capture image")
